@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .hidden{
+        display: none;
+    }
+    .c1{
+        position: fixed;
+        left:0;
+        top:0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        opacity: 0.6;
+        z-index: 9;
+    }
+
+    .c2{
+        width: 500px;
+        height: 400px;
+        background-color: white;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin-left: -250px;
+        margin-top: -200px;
+        z-index: 10;
+    }
+</style>
+<body   style="margin: 0;">
+    <div>
+        <input type="button" value="添加" onclick="showmodel();"/>
+        <input type="button" value="全选" onclick="chooseAll();"/>
+        <input type="button" value="取消" onclick="cancelAll();"/>
+        <input type="button" value="反选" onclick="reverseAll();"/>
+        <table>
+            <thead>
+                <tr>
+                    <th>请选择</th>
+                    <th>主机名</th>
+                    <th>端口</th>
+                </tr>
+                <tr></tr>
+            </thead>
+            <tbody id="tb">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1.1.1.1</td>
+                    <td>190</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="test"></td>
+                    <td>1.1.1.2</td>
+                    <td>192</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>1.1.1.3</td>
+                    <td>193</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!-- 遮罩层开始 -->
+    <div id="i1" class="c1 hidden"></div>
+    <!-- 遮罩层结束 -->
+
+    <!-- 弹出框开始 -->
+    <div id="i2" class="c2 hidden">
+        <p><input type="text"></p>
+        <p><input type="text"></p>
+        <p>
+            <input type="button" value="取消" onclick="hiddenmodel();">
+            <input type="button" value="确定">
+        </p>
+    </div>
+    <!-- 弹出框结束 -->
+
+    <script>
+        function showmodel() {
+            document.getElementById('i1').classList.remove('hidden')
+            document.getElementById('i2').classList.remove('hidden')
+        }
+
+        function hiddenmodel() {
+            document.getElementById('i1').classList.add('hidden')
+            document.getElementById('i2').classList.add('hidden')
+        }
+
+        function chooseAll(){
+            var tbody = document.getElementById('tb');
+            var tr_list = tbody.children;
+            for(var i=0;i<tr_list.length;i++){
+                var current_tr = tr_list[i];
+                var checkbox = current_tr.children[0].children[0];
+                checkbox.checked = true;
+            }
+        }
+
+        function cancelAll(){
+            var tbody = document.getElementById('tb');
+            var tr_list = tbody.children;
+            for(var i=0;i<tr_list.length;i++){
+                var current_tr = tr_list[i];
+                var checkbox = current_tr.children[0].children[0];
+                checkbox.checked = false;
+            }
+        }
+
+        function reverseAll(){
+            var tbody = document.getElementById('tb');
+            var tr_list = tbody.children;
+            for(var i=0;i<tr_list.length;i++){
+                var current_tr = tr_list[i];
+                var checkbox = current_tr.children[0].children[0];
+                if(checkbox.checked){
+                    checkbox.checked = false;
+                }else{
+                    checkbox.checked = true;
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>

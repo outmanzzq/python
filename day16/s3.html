@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="fontawesome-5.0.9/web-fonts-with-css/css/fontawesome-all.min.css" />
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .pg-header{
+            height: 48px;
+            background-color: #2459a2;
+            color: white;
+            line-height: 48px;
+        }
+
+        .pg-header .logo{
+            width: 200px;
+            background-color: cadetblue;
+            text-align: center;
+
+        }
+
+        .pg-header .user{
+            margin-right: 60px;
+            padding: 0 20px;
+        }
+
+        .pg-header .user:hover{
+            background-color: steelblue;
+        }
+
+        .pg-header .user .a img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .pg-header .user .b{
+            z-index: 20;
+            position: absolute;
+            top: 48px;
+            /*left: 0;*/
+            right: 0;
+            background-color: white;
+            color: black;
+            width: 160px;
+            display: none;
+        }
+
+        .pg-header .user:hover .b{
+            display: block;
+        }
+
+        .pg-header .user .b a{
+            display: block;
+        }
+
+        .pg-header .icons{
+            padding: 0 20px;
+        }
+
+        .pg-header .icons:hover{
+            background-color: steelblue;
+        }
+
+        .left{
+            float: left;
+        }
+
+        .right{
+            float: right;
+        }
+
+        .pg-content .menu{
+            position: absolute;
+            top: 48px;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: #dddddd;
+
+        }
+
+        .pg-content .content{
+            position: absolute;
+            top: 48px;
+            right: 0;
+            bottom: 0;
+            left: 200px;
+            overflow: auto;
+            min-width: 980px;
+            z-index: 9;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pg-header">
+        <div class="logo left">
+            老男孩
+        </div>
+
+        <div class="user right" style="position: relative;">
+            <a class="a" href="#">
+                <img src="blog_logo.jpeg" />
+            </a>
+            <div class="b">
+                <a>我的资料</a>
+                <a>注销</a>
+            </div>
+        </div>
+
+        <div class="icons right">
+            <i class="fas fa-comment"></i>
+            <span>5</span>
+        </div>
+        <div class="icons right">
+            <i class="fas fa-bell"></i>
+        </div>
+    </div>
+    <div class="pg-content">
+        <div class="menu left">a</div>
+        <div class="content right">
+            <div style="position: fixed;bottom: 0;right: 0;width: 50px;height: 50px;">返回顶部</div>
+            <div style="background-color: blueviolet">
+                <p style="margin-top: 0;">dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+                <p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p><p>dfsdfsdfsd</p>
+            </div>
+        </div>
+    </div>
+    <div class="pg-footer"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value='+' onclick="AddEle();">
+    <input type="button" value='+' onclick="AddEle2();">
+    <div id="i1">
+        <p><input type="text"></p>
+    </div>
+
+<script>
+    function AddEle() {
+        var tag = "<p></p><input type='text' /></p>";
+        document.getElementById('i1').insertAdjacentHTML("beforeEnd",tag);
+    }
+
+    function AddEle2() {
+        var tag = document.createElement('input');
+
+        tag.setAttribute('type', 'text');
+        tag.style.fontSize = '16px';
+        tag.style.color = 'red';
+
+        var p = document.createElement('p');
+        p.appendChild(tag);
+
+        document.getElementById('i1').appendChild(p);
+    }
+</script>
+</body>
+</html>
